@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Mask Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>😷 Face Mask Detection System</h1>
+        <p class="subtitle">Take a photo to detect if you're wearing a mask</p>
+        
+        <div class="camera-section">
+            <video id="video" autoplay playsinline>Video stream not available</video>
+            <canvas id="canvas" style="display: none;"></canvas>
+        </div>
+        
+        <div class="controls">
+            <button id="start-camera" class="btn btn-primary">📸 Start Camera</button>
+            <button id="capture" class="btn btn-success" disabled>✨ Capture & Detect</button>
+        </div>
+        
+        <div id="result-section" style="display: none;">
+            <h2>Detection Result</h2>
+            <div id="result-content">
+                <img id="captured-image" alt="Captured image">
+                <div id="prediction-result"></div>
+            </div>
+        </div>
+        
+        <div id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Analyzing image...</p>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

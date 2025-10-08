@@ -1,0 +1,32 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Model files (if too large, host separately)
+*.keras
+*.h5
+
+# Environment variables and secrets
+.env
+*.env
+
+# ngrok config
+ngrok.yml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Training data (if large)
+data/
+dataset/
